@@ -14,5 +14,7 @@ jobs:
         with:
           node-version: 22
       - run: npm install 
+      - run: npm test 
       - run: node -c indes.js
-      - run: docker build -t bauwa .
+      - run: docker build -t babuwa .
+      - run:  docker run -p 3000:3000 babuwa
